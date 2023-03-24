@@ -150,15 +150,15 @@ def simulated_annealing(file_name, cost_opt, start_time):
 
 def excel_write(wb, it, opt, file):
     worksheet = wb.add_worksheet(file)
-    worksheet.write(0, 0, 'Nazwa instancji')
+    worksheet.write(0, 0, 'Instance name')
     worksheet.write(1, 0, file)
-    worksheet.write(0, 2, 'Liczba powtórzeń')
+    worksheet.write(0, 2, 'Iterations')
     worksheet.write(1, 2, it)
-    worksheet.write(0, 4, 'Wartość optymalna')
+    worksheet.write(0, 4, 'Optimal value')
     worksheet.write(1, 4, opt)
-    worksheet.write(3, 0, 'Czas wykonywania [s]:')
-    worksheet.write(3, 2, 'Uzyskany koszt: ')
-    worksheet.write(3, 4, 'Błąd [%]: ')
+    worksheet.write(3, 0, 'Execution time [s]: ')
+    worksheet.write(3, 2, 'Cost obtained: ')
+    worksheet.write(3, 4, 'Error [%]: ')
     return worksheet
 
 
@@ -205,7 +205,7 @@ def main():
             print("Path: ", p)
 
         idx += 1
-    input("Press any key to finish")
+    input("Press ENTER to finish")
     wb.close()
 
 
